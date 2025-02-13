@@ -1,0 +1,13 @@
+{
+	"install_phase" : [
+		{
+            "command" : "pkgman"
+        } 
+	],
+
+    "uninstall_phase" : [
+        {
+            "command" : "pkgman"
+        }
+    ]
+}

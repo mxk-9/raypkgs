@@ -1,0 +1,28 @@
+{
+    "name" : "raylib-dll-mvsc",
+    "description" : "Bre-built 'raylib.dll' with Microsoft C Compiler",
+
+    "fetch_phase" : [
+        {
+            "from" : "https://github.com/raysan5/raylib/releases/download/5.5/raylib-5.5_win64_mingw-w64.zip",
+            "to" : ["$fetch", "raylib.zip"]
+        }
+    ],
+
+    "unpack_phase" : [
+        {
+            "type" : "zip",
+            "src" : ["$fetch", "raylib.zip"],
+            "dest" : ["$src", "raylib.dll"],
+            "selected_items" : ["raylib-5.5_win64_mingw-w64/lib/raylib.dll"]
+        }
+    ],
+
+    "install_phase" : [
+        {
+            "command" : "copy",
+            "from" : ["$src", "raylib.dll"],
+            "to" : ["$out", "raylib.dll"]
+        }
+    ]
+}

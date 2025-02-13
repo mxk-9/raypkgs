@@ -1,0 +1,13 @@
+{
+    "build_phase" : [
+        {
+            "command" : "exec",
+            "exec_base" : [
+                "$dep", "mingw", "w64devkit", "bin", "make.exe"
+            ],
+            "args" : [
+                "-C" , "$src", "src"
+            ]
+        }
+    ]
+}

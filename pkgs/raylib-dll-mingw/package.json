@@ -1,0 +1,25 @@
+{
+    "name" : "raylib-dll-mingw",
+    "description" : "Package provides 'raylib.dll'",
+    "dependencies" : ["mingw", "raylib-src"],
+    "build_phase" : [
+        {
+            "command" : "copy",
+            "from" : ["$dep", "raylib-src", "src"],
+            "to" : ["$src", "src"]
+        },
+        {
+            "command" : "copy",
+            "from" : ["$pkg", "Makefile"],
+            "to" : ["$src", "src", "Makefile"]
+        }
+    ],
+
+    "install_phase" : [
+        {
+            "command" : "copy",
+            "from" : ["$src", "raylib.dll"],
+            "to" : ["$out", "raylib.dll"]
+        }
+    ]
+}

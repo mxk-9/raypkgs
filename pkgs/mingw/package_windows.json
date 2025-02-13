@@ -1,0 +1,24 @@
+{
+    "fetch_phase" : [
+        {
+            "from": "https://github.com/skeeto/w64devkit/releases/download/v2.0.0/w64devkit-x64-2.0.0.exe",
+            "to": [ "$fetch", "w64devkit-x64-2.0.0.exe" ]
+        }
+    ],
+
+    "unpack_phase" : [
+        {
+            "type" : "7z",
+            "src" : [ "$fetch", "w64devkit-x64-2.0.0.exe" ],
+            "dest" : [ "$src", "w64devkit" ]
+        }
+    ],
+
+    "install_phase" : [
+        {
+            "command" : "copy",
+            "from" : [ "$src", "w64devkit" ],
+            "to" : [ "$out" ]
+        }
+    ]
+}

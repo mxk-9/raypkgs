@@ -1,0 +1,29 @@
+{
+    "name" : "raylib-src",
+    "description" : "Raylib sources, need for Windows and Android builds",
+    "dependencies" : ["mingw"],
+
+    "fetch_phase" : [
+        {
+            "from" : "https://github.com/raysan5/raylib/archive/refs/tags/5.5.zip",
+            "to" : [ "$fetch", "5.5.zip" ]
+        }
+    ],
+
+    "unpack_phase" : [
+        {
+            "type" : "zip",
+            "src" : [ "$fetch", "5.5.zip" ],
+            "dest" : [ "$src", "src" ],
+            "selected_items" : [ "raylib-5.5/src" ]
+        }
+    ],
+
+    "install_phase" : [
+        {
+            "command" : "copy",
+            "from" : [ "$src", "src" ],
+            "to" : [ "$out" ]
+        }
+    ]
+}

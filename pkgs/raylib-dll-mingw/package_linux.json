@@ -1,0 +1,11 @@
+{
+    "build_phase" : [
+        {
+            "command" : "exec",
+            "exec_base" : [ "make" ],
+            "args" : [
+                "-C", "$src", "src"
+            ]
+        }
+    ]
+}

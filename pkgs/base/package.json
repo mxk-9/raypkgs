@@ -1,0 +1,5 @@
+{
+	"name" : "base",
+	"description" : "Base needed packages for linux to work with Raylib",
+    "systems" : ["linux"]
+}
