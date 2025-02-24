@@ -23,7 +23,7 @@
         {
             "command" : "copy",
             "from" : [ "$src", "src" ],
-            "to" : [ "$out" ]
+            "to" : [ "$out", "src" ]
         }
     ]
 }
