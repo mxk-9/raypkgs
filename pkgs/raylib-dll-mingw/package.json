@@ -9,7 +9,7 @@
             "to" : ["$src", "src"]
         },
         {
-            "command" : "copy",
+            "command" : "overwrite",
             "from" : ["$pkg", "Makefile"],
             "to" : ["$src", "src", "Makefile"]
         }
