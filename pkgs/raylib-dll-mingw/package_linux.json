@@ -4,7 +4,7 @@
             "command" : "exec",
             "exec_base" : [ "make" ],
             "args" : [
-                "-C", "$src", "src"
+                "-C", "$src/src"
             ]
         }
     ]
