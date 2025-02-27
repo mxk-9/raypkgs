@@ -6,7 +6,7 @@
         {
             "command" : "copy",
             "from" : ["$dep", "raylib-src", "src"],
-            "to" : ["$src", "src"]
+            "to" : ["$src"]
         },
         {
             "command" : "overwrite",
@@ -18,7 +18,7 @@
     "install_phase" : [
         {
             "command" : "copy",
-            "from" : ["$src", "raylib.dll"],
+            "from" : ["$src", "src", "raylib.dll"],
             "to" : ["$out", "raylib.dll"]
         }
     ]
